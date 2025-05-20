@@ -1,0 +1,24 @@
+<header>
+    <link rel="stylesheet" href="style.css">
+    <div class="logo">SNP TEST LAB</div>
+    <input type="search" id="product-search" placeholder="Search TEST..." aria-label="Search products" />
+    <button id="cart-btn" aria-label="Open cart" aria-haspopup="dialog" aria-expanded="false">
+        🛒 <span id="cart-count">0</span>
+    </button>
+</header>
+<main>
+    <section id="products" aria-label="Product listing">
+    </section>
+</main>
+<aside id="cart" aria-label="Shopping cart" role="dialog" aria-modal="true" aria-hidden="true">
+    <button id="close-cart" aria-label="Close cart">×</button>
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <div class="cart-total" aria-live="polite">Total: $0.00</div>
+    <button id="checkout-btn" disabled>Checkout</button>
+    <button><a href="finalpage.html">CLICK AND SCHEDULE PICKUP OF TEST</a></button>
+</aside>
+<script src="ecomm.js"></script>
+</body>
+
+</html>

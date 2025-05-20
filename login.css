@@ -1,0 +1,147 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0; padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-container {
+    background: #fff;
+    width: 320px;
+    max-width: 90vw;
+    padding: 2.5rem 2rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+  }
+  
+  .login-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #764ba2;
+  }
+  
+  .login-header p {
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.25rem;
+    margin-top: 1rem;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    border: 1.8px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #764ba2;
+    outline: none;
+  }
+  
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .remember {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember input[type="checkbox"] {
+    margin-right: 0.4rem;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  .remember label {
+    font-size: 0.85rem;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    font-size: 0.85rem;
+    color: #764ba2;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover,
+  .forgot-password:focus {
+    text-decoration: underline;
+  }
+  
+  button {
+    margin-top: 2.25rem;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: #764ba2;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(118, 75, 162, 0.6);
+    transition: background 0.3s ease;
+  }
+  
+  button:hover,
+  button:focus {
+    background: #5b3e87;
+  }
+  
+  .error-message {
+    color: #d93025;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: none;
+  }
+  
+  /* Responsive to fit in 600px height and 350px width */
+  @media (max-width: 350px) {
+    .login-container {
+      width: 95vw;
+      padding: 2rem 1.25rem 1.5rem;
+    }
+    .login-header h1 {
+      font-size: 1.5rem;
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.6rem;
+    }
+  }
+  

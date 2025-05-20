@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<title>Checkout - Schedule Pickup & Cashout</title>
+<link rel="stylesheet" href="finalpage.css" />
+</head>
+<body>
+  <main class="container" role="main" aria-label="Checkout cashout and pickup time selection">
+    <h1>Schedule Pickup & Cashout</h1>
+    <form id="checkoutForm" novalidate>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" placeholder="Enter your pickup address" required aria-required="true" aria-describedby="addressError"></textarea>
+      <div id="addressError" class="error-message">Please enter your address.</div>
+
+      <label for="paymentMethod">Method of Payment</label>
+      <select id="paymentMethod" name="paymentMethod" required aria-required="true" aria-describedby="paymentError">
+        <option value="" disabled selected>Select payment method</option>
+        <option value="credit_card">Credit Card</option>
+        <option value="debit_card">Debit Card</option>
+        <option value="paypal">PayPal</option>
+        <option value="apple_pay">Apple Pay</option>
+        <option value="google_pay">Google Pay</option>
+        <option value="cash">Cash on Pickup</option>
+      </select>
+      <div id="paymentError" class="error-message">Please select a payment method.</div>
+
+      <div class="inline-group">
+        <div>
+          <label for="pickupDate">Pickup Date</label>
+          <input type="date" id="pickupDate" name="pickupDate" required aria-required="true" aria-describedby="dateError" min="" />
+          <div id="dateError" class="error-message">Please select a valid pickup date.</div>
+        </div>
+        <div>
+          <label for="pickupTime">Pickup Time</label>
+          <select id="pickupTime" name="pickupTime" required aria-required="true" aria-describedby="timeError">
+            <option value="" disabled selected>Select time</option>
+            <option value="09:00">09:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="13:00">01:00 PM</option>
+            <option value="14:00">02:00 PM</option>
+            <option value="15:00">03:00 PM</option>
+            <option value="16:00">04:00 PM</option>
+            <option value="17:00">05:00 PM</option>
+          </select>
+          <div id="timeError" class="error-message">Please select a pickup time.</div>
+        </div>
+      </div>
+
+      <button type="submit" aria-label="Confirm cashout and schedule pickup">Confirm &amp; Proceed</button>
+    </form>
+    <div id="confirmationMessage" class="confirmation-message" role="alert" aria-live="assertive" style="display:none;">
+      Your test booking confirmed on this site.
+    </div>
+  </main>
+
+<script src="finalpage.js"></script>
+</body>
+</html>
